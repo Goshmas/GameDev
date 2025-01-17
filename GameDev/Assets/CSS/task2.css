@@ -1,0 +1,170 @@
+  .yet
+  { 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+  
+  }
+  
+  .main {
+    display: flex;
+    position: relative;
+  }
+  
+  .ad-container {
+    width: 200px;
+    height: 200px;
+    position: relative; /* Позиционируем контейнер относительно родителя */
+    background-color: #708090;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.1s ease-in-out;
+    outline: none;
+  }
+  
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    75% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes letterTransform {
+    0% {
+      transform: scale(1) translate(0, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0) translate(50px, 50px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes imageAppear {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) translateY(50%); /* Сначала будет уменьшено и внизу */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0); /* Затем появится с нормальным размером и в центре */
+    }
+  }
+  
+  .ad-container:focus {
+    animation: shake 0.5s ease-in-out 8;
+  }
+  
+  .ad-container:focus .letter {
+    animation: letterTransform 4s forwards;
+  }
+  
+  .ad-container:focus .image {
+    animation: imageAppear 2s forwards 4s; /* Картинка появляется через 4 секунды */
+  }
+  
+  .text {
+    position: absolute;
+    top: 20px; /* Опустим текст немного ниже */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    opacity: 0; /* Скрыто по умолчанию */
+    transition: opacity 2s ease-in-out;
+  }
+  
+  .ad-container:focus .text {
+    opacity: 1; /* Появляется при фокусе */
+  }
+  
+  .letter {
+    fill: none;
+    width: 50%;
+    height: 40%;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+  }
+  
+  .pathG, .pathM {
+    stroke: black;
+    stroke-width: 2;
+  }
+  
+  .dot {
+    fill: none;
+    stroke: black;
+    stroke-width: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  @keyframes moveG {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+  
+  @keyframes moveM {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+  
+  .ad-container:hover .dot {
+    opacity: 1;
+  }
+  
+  .ad-container:hover .dot.dotG {
+    animation: moveG 2s linear infinite;
+  }
+  
+  .ad-container:hover .dot.dotM {
+    animation: moveM 10s linear infinite;
+  }
+  
+  .dot.dotG {
+    offset-path: path('M 10 80 L 10 10 L 60 10 L 60 30 L 30 30 L 30 80 Z');
+  }
+  
+  .dot.dotM {
+    offset-path: path('M 10 80 L 10 10 L 30 10 L 40 40 L 50 10 L 70 10 L 70 80 L 60 80 L 60 25 L 50 60 L 30 60 L 20 25 L 20 80 Z');
+  }
+  
+  
+  
+  .image {
+    opacity: 0; /* Скрыта по умолчанию */
+    width: 120px; /* Размер круга (диаметр) */
+    height: 120px; /* Высота = ширина для круга */
+    position: absolute; /* Позиционируем картинку относительно родителя */
+    top: 40%; /* Располагаем по вертикали в центре родителя */
+    left: 40%; /* Располагаем по горизонтали в центре родителя */
+    transform: translate(-70%, -70%); /* Сдвигаем картинку немного влево и вверх от её центра */
+    object-fit: cover; /* Масштабируем изображение, чтобы оно не выходило за границы круга */
+    border-radius: 50%; /* Закругляем углы, создавая круг */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+  }
+  
+  

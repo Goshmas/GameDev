@@ -1,0 +1,244 @@
+.yet
+{ 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.square-1 { 
+  position: absolute; 
+  background: linear-gradient(rgb(79, 153, 224), white 80%); 
+  height: 200px; 
+  width: 200px; 
+} 
+
+.square_main{ 
+position: relative; 
+display: inline-block; 
+width: 200px; 
+height: 200px; 
+overflow: hidden; 
+} 
+
+.ground { 
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 40px; 
+  background: repeating-linear-gradient(-45deg,#faf45e, 
+#faf45e 10px,#8cf171 10px,#8cf171 20px) 
+} 
+
+.oval { 
+  position: absolute; 
+  width: 70px; 
+  height: 35px; 
+  border-radius: 100px / 50px; 
+  background: radial-gradient(circle at 20% 70%,#cfd4ce 10%, #757a74 50%); 
+  border: 1px solid #4e5454; 
+  top: 110px; /* Отступ сверху */ 
+  left: 90px; /* Отступ слева */ 
+} 
+ 
+.neck { 
+  position: absolute; 
+  width: 35px; 
+  height: 15px; 
+  background-color: #80857e; 
+  top: 110px; /* Отступ сверху */ 
+  left: 85px; /* Отступ слева */ 
+  transform: rotate(60deg); 
+} 
+
+.head{ 
+  position: absolute; 
+  width: 40px; 
+  height: 20px; 
+  border-radius: 100px / 50px; 
+  background: radial-gradient(circle at 0% 60%,#cfd4ce 5%, #757a74 50%); 
+  border: 1px solid #646a68; 
+  top: 90px; /* Отступ сверху */ 
+  left: 70px; /* Отступ слева */ 
+  transform: rotate(-10deg); 
+} 
+
+.leg-1{ 
+  transform: rotate(150deg); 
+  top: 131px; /* Отступ сверху */ 
+  left: 145px; /* Отступ слева */ 
+} 
+
+.leg-2{ 
+  transform: rotate(180deg); 
+  top: 135px; /* Отступ сверху */ 
+  left: 135px; /* Отступ слева */ 
+} 
+
+.leg-3{ 
+  transform: rotate(180deg); 
+  top: 135px; /* Отступ сверху */ 
+  left: 110px; /* Отступ слева */ 
+} 
+
+.leg-4{ 
+  transform: rotate(200deg); 
+  top: 135px; /* Отступ сверху */ 
+  left: 98px; /* Отступ слева */ 
+} 
+
+.tail-1 { 
+  position: absolute; 
+  width: 14px; 
+  height: 7px; 
+  border-top-left-radius: 110px;   
+  border-top-right-radius: 110px;  
+  border: 3px solid gray; 
+  border-bottom: 0; 
+  transform: rotate(90deg); 
+  top: 115px; /* Отступ сверху */ 
+  left: 155px; /* Отступ слева */ 
+} 
+
+.tail-2 { 
+  position: absolute; 
+  width: 14px; 
+  height: 7px; 
+  border-top-left-radius: 110px;    
+  border-top-right-radius: 110px;  
+  border: 3px solid gray; 
+  border-bottom: 0; 
+  transform: rotate(270deg); 
+  top: 98.3px; /* Отступ сверху */ 
+  left: 147px; /* Отступ слева */ 
+} 
+
+.tail-3{ 
+  position: absolute; 
+  width: 0; 
+height: 0; 
+border-left: 4px solid transparent; 
+border-right: 4px solid transparent; 
+border-bottom: 8px solid #85887d; 
+  transform: rotate(250deg); 
+  top: 91px; /* Отступ сверху */ 
+  left: 158px; /* Отступ слева */ 
+} 
+
+.mounth{ 
+  position:
+  absolute; 
+    width: 4px; 
+    height: 2px; 
+    border-top-left-radius: 110px;   
+    border-top-right-radius: 110px;  
+    border: 3px solid gray; 
+    border-bottom: 0; 
+    transform: rotate(160deg); 
+    top: 106px; /* Отступ сверху */ 
+    left: 73px; /* Отступ слева */ 
+  } 
+ 
+  .ear-1{ 
+    position: absolute; 
+    width: 50px;  
+    height: 13px; 
+    background: radial-gradient(circle at 100% 100%, white, #757a74 80%); 
+    border-radius: 150px/45px; 
+    top: 86px; /* Отступ сверху */ 
+    left: 100px; /* Отступ слева */ 
+    transform: rotate(-15deg); 
+  } 
+ 
+  .ear-2{ 
+    position: absolute; 
+    width: 50px;  
+    height: 13px; 
+    background: radial-gradient(circle at 100% 100%, white, #757a74 80%); 
+    border-radius: 150px/45px; 
+    top: 75px; /* Отступ сверху */ 
+    left: 86px; /* Отступ слева */ 
+    transform: rotate(-40deg); 
+  } 
+ 
+  .eye-2{ 
+    position: absolute; 
+    width: 4.5px; 
+ height: 5px; 
+ background: black; 
+ -moz-border-radius: 3px; 
+ -webkit-border-radius: 3px; 
+ border-radius: 50%; 
+    top: 97px; /* Отступ сверху */ 
+    left: 96px; /* Отступ слева */      
+  } 
+ 
+.eye-1{ 
+    position: absolute; 
+    width: 8px; 
+ height: 8px; 
+ background: white; 
+ -moz-border-radius: 4px; 
+ -webkit-border-radius: 4px; 
+ border-radius: 4px; 
+    top: 95px; /* Отступ сверху */ 
+    left: 95px; /* Отступ слева */     
+  } 
+ 
+.nose{ 
+    position: absolute; 
+    width: 4px; 
+ height: 4px; 
+ background: #616660; 
+ -moz-border-radius: 2px; 
+ -webkit-border-radius: 2px; 
+ border-radius: 2px; 
+    top: 101px; /* Отступ сверху */ 
+    left: 73px; /* Отступ слева */    
+  } 
+ 
+.balloon{ 
+    position: absolute; 
+    width: 40px; 
+    height: 20px; 
+    border-radius: 100px / 50px; 
+    background: radial-gradient(circle at 30% 40%,white 5%, #e0456d 50%); 
+    top: 45px; /* Отступ сверху */ 
+    left: -20px; /* Отступ слева */ 
+    transform: rotate(75deg); 
+} 
+ 
+.balloon-string{ 
+    position: absolute; 
+    width: 200px; 
+    height: 100px; 
+    border-top-left-radius: 130px;   
+    border-top-right-radius: 130px;  
+    border: 3px solid #95da65; 
+    border-bottom: 0; 
+    transform: rotate(90deg); 
+    top: 70px; /* Отступ сверху */ 
+    left: -135px; /* Отступ слева */ 
+ 
+} 
+ 
+.balloon-triangle{ 
+    position: absolute; 
+    width: 0; 
+ height: 0; 
+ border-left: 4px solid transparent; 
+ border-right: 4px solid transparent; 
+ border-bottom: 8px solid #e0456d; 
+    transform: rotate(250deg); 
+    top: 73px; /* Отступ сверху */ 
+    left: 5px; /* Отступ слева */ 
+    transform: rotate(92deg); 
+} 
+ 
+.leg{ 
+  position: absolute; 
+  border-bottom: 26px solid #757a74; /*высота*/ 
+  border-left: 4px solid transparent; 
+  border-right: 4px solid transparent; 
+  height: 0; 
+  width: 8px; /*ширина верхнего основания*/  
+}
